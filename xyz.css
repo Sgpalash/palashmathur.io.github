@@ -1,98 +1,12 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    background-color: #f2f2f2;
-    color: #333;
-    transition: background-color 0.5s;
-}
-
-/* Animate header */
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* Text hover color change */
-header h1:hover {
-    color: #007acc;
-    transition: color 0.4s;
-}
-
-/* Fade-in animation keyframes */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Sections animation on hover */
-section {
-    margin-bottom: 1.5rem;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.4); /* or white if you prefer */
-    color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
-}
-
-/* On hover, elevate section */
-section:hover {
-     transform: translateY(-4px);
-}
-
-/* Headings color animation */
-h2 {
-    color: #007acc;
-    transition: color 0.3s;
-}
-
-h2:hover {
-    color: #e91e63;
-}
-
-/* Footer fade-in */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #555;
-    opacity: 0;
-    animation: fadeIn 3s ease forwards;
-    animation-delay: 1s;
-}
-
-/* Link hover effect */
-a {
-    color: #007acc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #e91e63;
+/* ===== GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffecd2);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: #333;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-body {
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
     overflow-x: hidden;
     background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
@@ -101,67 +15,122 @@ body {
     color: #fff;
 }
 
+/* ===== BACKGROUND ANIMATION ===== */
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-
-@keyframes gradientBG {
-  0% { background-position: 0 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0 50%; }
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
+header h1:hover {
+    color: #00bcd4;
+}
+
+/* ===== HERO (SAME LOOK, FIXED SPACING) ===== */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* NAME */
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+}
+
+/* SUBTITLE */
+.subtitle {
+    font-size: 1.1rem;
+    color: #cfd8dc;
+    margin-bottom: 20px;
+}
+
+/* ===== BUTTON BOX ===== */
+.button-box {
+    display: inline-flex;
+    gap: 25px;
+    background: #1db6c4;
+    padding: 15px 30px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.button-box:hover {
+    transform: translateY(-3px);
+}
+
+.button-box a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ===== DOWNLOAD LINK ===== */
+.download-link {
+    display: block;
+    margin-top: 5px;
+    color: #00e5ff;
+    font-size: 1rem;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== CONTAINER ===== */
 .container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  margin: auto;
-  max-width: 900px;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-color: #121212;  /* Dark background */
-    color: #fff; /* White text */
-    font-family: 'Arial', sans-serif;
-}
-
-.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 1000px;
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    width: 90%;
 }
 
-/* Headings and hover effects (optional) */
+/* ===== SECTION (GLASS STYLE SAME AS YOUR IMAGE) ===== */
+section {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== TEXT ===== */
 h1 {
-    font-size: 2.5rem;
     text-align: center;
 }
 
 h2 {
     font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    color: #1e88e5;
+    margin-bottom: 10px;
 }
 
 p, li {
     font-size: 1rem;
     line-height: 1.6;
+    color: #e0e0e0;
 }
 
-
+/* ===== LINKS ===== */
 a {
     color: #00bcd4;
     text-decoration: none;
@@ -171,143 +140,116 @@ a:hover {
     color: #ffffff;
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
 }
 
-.buttons button {
-    background-color: #00bcd4;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.buttons button:hover {
-    background-color: #0288a7;
-    transform: translateY(-2px);
+/* ===== FLOATING ICONS ===== */
+.floating-icons {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: #fff;
+.floating-icons i {
+    position: absolute;
+    font-size: 30px;
+    color: rgba(255,255,255,0.2);
+    animation: floatRandom 8s ease-in-out infinite alternate;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes floatRandom {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(15px,-15px); }
+    100% { transform: translate(-15px,15px); }
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+    .hero {
+        padding: 30px 15px;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .button-box {
+        flex-direction: column;
+        width: 80%;
     }
 
     .container {
         padding: 1rem;
     }
 
-    section {
-        padding: 15px;
-    }
-
-    .buttons button {
-        width: 100%; /* Stack buttons on small screens */
+    h2 {
+        font-size: 1.5rem;
     }
 }
 
-/* Button Styles */
-.btn {
-    display: inline-block;
-    background-color: #00bcd4;
-    color: white;
-    text-decoration: none;
-    padding: 0.6rem 1.2rem;
-    margin: 0.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+/* ===== BUTTON ACTIVE / CLICK EFFECT ===== */
+.button-box a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #0288a7;
-    transform: translateY(-2px);
+/* Hover effect */
+.button-box a:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
-section.transparent-assistant {
-    background: rgba(255, 255, 255, 0.05); /* Very light transparent white */
-    backdrop-filter: blur(15px);           /* Strong blur for glass effect */
-    -webkit-backdrop-filter: blur(15px);   /* Safari support */
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+/* Click (active) effect */
+.button-box a:active {
+    transform: scale(0.95);
 }
 
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+/* Selected button (persistent highlight) */
+.button-box a.active {
+    background: #0fb5c4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
 }
 
-/* Container for floating icons */
-
-
-/* Styling for each icon */
-/* Container for floating icons */
-.floating-icons {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
+/* ===== PROJECT SECTION ===== */
+section h3 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 
-/* Styling for each icon */
-.floating-icons i {
-    position: absolute;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.2);
-    animation: floatRandom 8s ease-in-out infinite alternate;
+/* Numbered titles */
+section h3::before {
+    font-weight: bold;
+    margin-right: 5px;
 }
 
-/* Set starting positions and animation delays */
-.floating-icons i:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.floating-icons i:nth-child(2) { top: 40%; left: 70%; animation-delay: 1s; }
-.floating-icons i:nth-child(3) { top: 70%; left: 30%; animation-delay: 2s; }
-.floating-icons i:nth-child(4) { top: 20%; left: 50%; animation-delay: 3s; }
-.floating-icons i:nth-child(5) { top: 60%; left: 80%; animation-delay: 4s; }
+/* Bullet points spacing */
+section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
 
-/* Random floating keyframes */
-@keyframes floatRandom {
-    0%   { transform: translate(0, 0) rotate(0deg); }
-    25%  { transform: translate(20px, -20px) rotate(5deg); }
-    50%  { transform: translate(-15px, 15px) rotate(-5deg); }
-    75%  { transform: translate(10px, -10px) rotate(3deg); }
-    100% { transform: translate(-20px, 20px) rotate(-3deg); }
+section ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+section h3 {
+    color: #ffffff;
+    font-weight: 600;
 }
